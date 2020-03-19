@@ -6,8 +6,8 @@
  *	pmempool create obj --layout=find_bugs -s 1G find_bugs
  */
 
-#include <libpmemobj++/experimental/array.hpp>
-#include <libpmemobj++/experimental/string.hpp>
+#include <libpmemobj++/container/array.hpp>
+#include <libpmemobj++/container/string.hpp>
 #include <libpmemobj++/make_persistent.hpp>
 #include <libpmemobj++/mutex.hpp>
 #include <libpmemobj++/p.hpp>
@@ -27,7 +27,7 @@ struct data {
 
 	pmem::obj::p<int> pmem_property;
 
-	pmem::obj::experimental::vector<int> vec;
+	pmem::obj::vector<int> vec;
 
 	pmem::obj::persistent_ptr<int> int_ptr;
 };
